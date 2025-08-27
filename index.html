@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Wanderlust Travels</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <header class="site-header">
+    <img src="logo.png" alt="Site Logo" class="logo">
+    <div class="container nav-container">
+      <h1 class="logo">Wanderlust Travels</h1>
+      <input type="checkbox" id="menu-toggle">
+      <label for="menu-toggle" class="menu-icon">&#9776;</label>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="#">Home</a></li>
+          <li><a href="#packages">Packages</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-text">
+      <h2>Your Journey Begins Here</h2>
+      <p>Explore the world with our exclusive travel packages</p>
+      <a href="#openBookingModal">
+        <label for="booking-toggle" class="btn">Book Now</label>
+      </a>
+    </div>
+  </section>
+
+
+  <!-- Packages Section -->
+  <section class="packages" id="packages">
+    <div class="container">
+      <h2>Featured Packages</h2>
+      <div class="cards">
+        <div class="card">
+          <img src="images/paris.webp" alt="Paris">
+          <h3>Paris Getaway</h3>
+          <p>5 nights in the city of love, including flights and hotel.</p>
+        </div>
+        <div class="card">
+          <img src="images/bali.jpg" alt="Bali">
+          <h3>Bali Retreat</h3>
+          <p>7 days in paradise with spa and beach resort included.</p>
+        </div>
+        <div class="card">
+          <img src="images/newyork.webp" alt="New York">
+          <h3>New York Explorer</h3>
+          <p>Experience the Big Apple with guided city tours.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery Section -->
+  <section class="gallery" id="gallery">
+    <div class="container">
+      <h2>Explore Destinations</h2>
+      <div class="gallery-images">
+
+        <div class="destination-card">
+          <img src="images/paris1.jpg" alt="Paris">
+          <h4>Paris, France</h4>
+        </div>
+
+        <div class="destination-card">
+          <img src="images/dubai.webp" alt="Dubai">
+          <h4>Dubai, U.A.E</h4>
+        </div>
+
+        <div class="destination-card">
+          <img src="images/japan.webp" alt="Japan">
+          <h4>Tokyo, Japan</h4>
+        </div>
+
+        <div class="destination-card">
+          <img src="images/safari.jpeg" alt="Safari">
+          <h4>Safari, Africa</h4>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="about" id="about">
+    <div class="container">
+      <div class="about-us">
+        <h2>About Us</h2>
+        <p>
+          At <strong>Wanderlust Travels</strong>, we specialize in curating unforgettable travel experiences.
+          With a passion for exploration and a network of global partners, we offer unbeatable deals, personalized
+          itineraries,
+          and seamless service—ensuring every journey is truly memorable.
+        </p>
+      </div>
+  </section>
+
+  <!-- Map -->
+  <section class="map">
+    <div class="container">
+      <h2>Find Us</h2>
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.8354345093744!2d144.96305771531865!3d-37.81627917975101!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad65d43f29d5637%3A0x2d0b1e1c9d1d2f7b!2sCBD%2C%20Melbourne%20VIC%203000%2C%20Australia!5e0!3m2!1sen!2sus!4v1667801320090!5m2!1sen!2sus"
+        allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="contact-section">
+    <h2>Contact Us</h2>
+    <form class="contact-form">
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <textarea placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+
+  <!-- Book Now Button -->
+  <div class="book-now-container">
+    <button id="openBookingModal">Book Your Trip</button>
+  </div>
+
+  <!-- Booking Modal -->
+  <div id="bookingModal" class="modal-overlay">
+    <div class="modal-content">
+      <span id="closeBookingModal" class="close-btn">&times;</span>
+      <h2>Book Your Trip</h2>
+      <form class="booking-form">
+        <input type="text" placeholder="Full Name" required>
+        <input type="email" placeholder="Email Address" required>
+        <input type="date" required>
+        <select required>
+          <option value="">Select Destination</option>
+          <option>Paris</option>
+          <option>Bali</option>
+          <option>Tokyo</option>
+          <option>New York</option>
+        </select>
+        <button type="submit">Confirm Booking</button>
+      </form>
+    </div>
+  </div>
+
+
+
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <p>&copy; 2025 <strong>Wanderlust Travels</strong>. All rights reserved.</p>
+        <p><a href="privacy.html">Privacy Policy</a> | <a href="terms.html">Terms & Conditions</a></p>
+      </div>
+    </div>
+  </footer>
+
+
+</body>
+
+<script>
+  const modal = document.getElementById("bookingModal");
+  const openBtn = document.getElementById("openBookingModal");
+  const closeBtn = document.getElementById("closeBookingModal");
+
+  openBtn.addEventListener("click", () => {
+    modal.style.display = "flex";
+  });
+
+  closeBtn.addEventListener("click", () => {
+    modal.style.display = "none";
+  });
+
+  // Close when clicking outside modal content
+  window.addEventListener("click", (e) => {
+    if (e.target === modal) {
+      modal.style.display = "none";
+    }
+  });
+</script>
+
+
+</html>
